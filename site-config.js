@@ -60,8 +60,8 @@ window.SITE_CONFIG = {
     },
     code: {
       label: "Code",
-      url: "#",
-      enabled: false,
+      url: "https://github.com/libd1/Alchemy3D",
+      enabled: true,
       icon: "assets/icons/github.png",
       iconClass: "is-invert",
     },
@@ -91,8 +91,8 @@ window.SITE_CONFIG = {
     },
     evaluation: {
       label: "Evaluation",
-      url: "#",
-      enabled: false,
+      url: "https://github.com/libd1/edit3dstudio",
+      enabled: true,
       icon: "assets/icons/github.png",
       iconClass: "is-invert",
     },
