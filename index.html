@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alchemy3D - Project Page</title>
+    <meta
+      name="description"
+      content="Alchemy3D: Scalable 3D foundation model for versatile Assets Editing."
+    />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=figlayout9" />
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img id="hero-teaser" src="assets/teaser_still.png" alt="" />
+        <div class="hero-shade"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="conference" id="conference">Arxiv Preprint 2026</p>
+        <div class="brand-lockup">
+          <img
+            class="brand-mark"
+            id="brand-logo"
+            src="assets/logo_alchemy3d.png"
+            alt=""
+            width="160"
+            height="160"
+          />
+          <h1 class="brand" id="project-name">Alchemy3D</h1>
+        </div>
+        <p class="tagline" id="tagline">
+          Scalable 3D foundation model for versatile Assets Editing
+        </p>
+        <nav class="resource-row" id="resource-row" aria-label="Project resources"></nav>
+        <div class="authors" id="authors"></div>
+        <p class="affiliations" id="affiliations"></p>
+        <p class="equal-note" id="equal-note" hidden>
+          <span class="author-mark">*</span> Equal contribution ·
+          <span class="author-mark">†</span> Corresponding author
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="abstract" id="abstract">
+        <div class="wrap">
+          <p class="section-label">Abstract</p>
+          <div id="abstract-text" class="abstract-body"></div>
+          <ul class="teaser-legend" aria-label="Edit-type color key">
+            <li><i class="swatch swatch-add"></i>Addition</li>
+            <li><i class="swatch swatch-remove"></i>Removal</li>
+            <li><i class="swatch swatch-replace"></i>Replacement</li>
+            <li><i class="swatch swatch-local"></i>Local appearance</li>
+            <li><i class="swatch swatch-global"></i>Global appearance</li>
+            <li><i class="swatch swatch-anim"></i>Animation</li>
+          </ul>
+          <figure class="figure-teaser">
+            <div class="teaser-crop">
+              <img
+                src="assets/figures/teaser.png"
+                alt="Alchemy3D editing types: addition, removal, replacement, local appearance, global appearance, and animation."
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section id="dataset">
+        <div class="wrap wrap-wide">
+          <p class="section-label">Dataset</p>
+          <h2>Alchemy3D-1M</h2>
+          <p class="lead">
+            A million-scale editing corpus with 1.25M unique assets and 1.38M
+            pairs spanning seven edit types, using PBR-ready assets. Type-specific
+            pipelines cover addition, removal, replacement, local and global
+            appearance, and animation. A segmentation split is held out of
+            training (825K pairs after balancing).
+          </p>
+          <ul class="stat-strip" aria-label="Alchemy3D-1M statistics">
+            <li>
+              <strong>7</strong>
+              <span>edit types</span>
+            </li>
+            <li>
+              <strong>1.25M</strong>
+              <span>unique assets</span>
+            </li>
+            <li>
+              <strong>1.38M</strong>
+              <span>editing pairs</span>
+            </li>
+            <li>
+              <strong>PBR</strong>
+              <span>ready assets</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="method">
+        <div class="wrap wrap-wide">
+          <p class="section-label">Method</p>
+          <h2>Alchemy3D model</h2>
+          <p class="lead">
+            The Alchemy3D model is a strong baseline for versatile 3D asset
+            editing. Trained on the constructed Alchemy3D-1M dataset, it
+            concatenates encoded source tokens directly with noisy tokens,
+            enabling in-depth interaction within the transformer block.
+          </p>
+          <figure class="figure-plate figure-plate-75">
+            <img
+              src="assets/figures/model.png"
+              alt="Alchemy3D architecture: source and target encoders, optional image or text instruction, cross-attention transformer, and decoder."
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="benchmark">
+        <div class="wrap wrap-wide">
+          <p class="section-label">Benchmark</p>
+          <h2>GEdit3D-Bench</h2>
+          <p class="lead">
+            GEdit3D-Bench is a large-scale, multi-dimensional benchmark built
+            from assets independent of our training data. It combines newly
+            synthesized 3D content with recently released Sketchfab assets;
+            all samples are curated through automated and human filtering, and
+            evaluation jointly measures view quality, reference alignment, and
+            MLLM-based scores rather than similarity to a single generated
+            target.
+          </p>
+          <figure class="figure-plate figure-plate-75">
+            <img
+              src="assets/figures/benchmark.png"
+              alt="GEdit3D-Bench construction: asset collection, captioning, instruction and image generation, human-in-the-loop curation, and evaluation metrics."
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="comparisons">
+        <div class="wrap wrap-wide">
+          <p class="section-label">Results</p>
+          <h2>Alchemy3D</h2>
+          <p class="lead">
+            Side-by-side Source / Edited wipes from our base model, Alchemy3D.
+            Click <strong>Download to view</strong> on a card to fetch that
+            pair (with progress). Then drag to orbit and wipe Source / Edited.
+            Use Normals for real-time normal shading.
+          </p>
+          <button type="button" class="download-all-btn" id="cmp-download-all">
+            Download all assets
+          </button>
+          <div class="cmp-shading-toggle" id="cmp-shading-toggle" role="group" aria-label="Shading mode">
+            <button type="button" class="is-active" data-shading-mode="shaded">Shaded</button>
+            <button type="button" data-shading-mode="normals">Normals</button>
+          </div>
+          <div class="comparisons-list" id="comparisons-root"></div>
+
+          <div class="anim-seq-block" id="anim-sequences">
+            <h2>Alchemy3D-Animations</h2>
+            <p class="lead" id="anim-sequences-lead"></p>
+            <button type="button" class="download-all-btn" id="anim-download-all">
+              Download all assets
+            </button>
+            <div class="anim-seq-list" id="anim-sequences-root"></div>
+          </div>
+
+          <div class="seg-block" id="seg-showcases">
+            <h2>Alchemy3D-Segment</h2>
+            <p class="lead" id="seg-showcases-lead"></p>
+            <button type="button" class="download-all-btn" id="seg-download-all">
+              Download all assets
+            </button>
+            <div class="seg-list" id="seg-showcases-root"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quantitative">
+        <div class="wrap wrap-wide">
+          <p class="section-label">Comparison</p>
+          <h2>Quantitative results</h2>
+          <p class="lead">
+            Add / remove / replace on GEdit3D-Bench. Alchemy3D reaches
+            89.6% success and 70.7% human preference; prior methods sit near
+            5–7% preference.
+          </p>
+          <div class="results-table-wrap">
+            <table class="results-table">
+              <caption>
+                Table 2. GEdit3D-Bench, add / remove / replace. Higher is
+                better. Best in <strong>bold</strong>, second-best
+                <span class="second">underlined</span>.
+              </caption>
+              <thead>
+                <tr>
+                  <th rowspan="2" scope="col">Method</th>
+                  <th colspan="2" scope="colgroup">View quality</th>
+                  <th colspan="3" scope="colgroup">Reference alignment</th>
+                  <th colspan="4" scope="colgroup">MLLM</th>
+                  <th rowspan="2" scope="col">Human<br />Pref.</th>
+                </tr>
+                <tr>
+                  <th scope="col">Aes.</th>
+                  <th scope="col">MUSIQ</th>
+                  <th scope="col">A<sub>CLIP I</sub></th>
+                  <th scope="col">A<sub>CLIP T</sub></th>
+                  <th scope="col">A<sub>DINO I</sub></th>
+                  <th scope="col">SR</th>
+                  <th scope="col">VQ</th>
+                  <th scope="col">IF</th>
+                  <th scope="col">IP</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Nano3D</th>
+                  <td>4.40</td>
+                  <td class="second">72.87</td>
+                  <td>81.59</td>
+                  <td>65.10</td>
+                  <td>69.15</td>
+                  <td>51.14%</td>
+                  <td class="second">70.16</td>
+                  <td>53.84</td>
+                  <td>72.09</td>
+                  <td>5.1%</td>
+                </tr>
+                <tr>
+                  <th scope="row">3DEditFormer</th>
+                  <td>4.34</td>
+                  <td>70.87</td>
+                  <td>81.83</td>
+                  <td>63.19</td>
+                  <td>68.07</td>
+                  <td>58.90%</td>
+                  <td>66.31</td>
+                  <td>59.79</td>
+                  <td>63.39</td>
+                  <td>5.3%</td>
+                </tr>
+                <tr>
+                  <th scope="row">PartFlow</th>
+                  <td>4.31</td>
+                  <td>70.96</td>
+                  <td>81.25</td>
+                  <td>62.24</td>
+                  <td>67.78</td>
+                  <td>55.50%</td>
+                  <td>65.27</td>
+                  <td>56.20</td>
+                  <td>66.60</td>
+                  <td class="second">6.5%</td>
+                </tr>
+                <tr>
+                  <th scope="row">Alchemy3D-Turbo</th>
+                  <td class="best">4.58</td>
+                  <td class="best">72.94</td>
+                  <td class="second">82.36</td>
+                  <td class="best">68.31</td>
+                  <td class="second">72.88</td>
+                  <td class="second">88.18%</td>
+                  <td>69.91</td>
+                  <td class="second">70.71</td>
+                  <td class="second">73.22</td>
+                  <td>—</td>
+                </tr>
+                <tr class="is-ours">
+                  <th scope="row">Alchemy3D</th>
+                  <td class="second">4.43</td>
+                  <td>72.36</td>
+                  <td class="best">84.91</td>
+                  <td class="second">67.47</td>
+                  <td class="best">73.18</td>
+                  <td class="best">89.55%</td>
+                  <td class="best">72.74</td>
+                  <td class="best">71.38</td>
+                  <td class="best">76.19</td>
+                  <td class="best">70.7%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="bibtex">
+        <div class="wrap">
+          <p class="section-label">Citation</p>
+          <h2>BibTeX</h2>
+          <div class="bib-block">
+            <button type="button" class="copy-btn" id="copy-bib">Copy</button>
+            <pre id="bibtex-text"></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <span class="brand-mini">
+          <img
+            class="brand-mark-mini"
+            src="assets/logo_alchemy3d.png"
+            alt=""
+            width="28"
+            height="28"
+          />
+          <span id="footer-brand">Alchemy3D</span>
+        </span>
+        <span id="footer-note"></span>
+      </div>
+    </footer>
+
+    <script src="site-config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
