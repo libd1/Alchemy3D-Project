@@ -30,7 +30,7 @@ window.SITE_CONFIG = {
     {
       name: "Yi Ma",
       affiliationIds: [1, 2],
-      url: "https://www.cs.hku.hk/index.php/people/academic-staff/mayi",
+      url: "https://people.eecs.berkeley.edu/~yima/",
     },
     {
       name: "Shenghua Gao",
