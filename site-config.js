@@ -30,7 +30,7 @@ window.SITE_CONFIG = {
     {
       name: "Yi Ma",
       affiliationIds: [1, 2],
-      url: "https://people.eecs.berkeley.edu/~yima/",
+      url: "https://www.cs.hku.hk/index.php/people/academic-staff/mayi",
     },
     {
       name: "Shenghua Gao",
@@ -54,8 +54,8 @@ window.SITE_CONFIG = {
     },
     arxiv: {
       label: "Arxiv",
-      url: "#",
-      enabled: false,
+      url: "https://arxiv.org/abs/2609.34271",
+      enabled: true,
       icon: "assets/icons/arxiv.png",
     },
     code: {
@@ -292,7 +292,15 @@ window.SITE_CONFIG = {
     },
   ],
 
-  bibtex: "",
+  bibtex: `@misc{li2026scalingversatile3dassets,
+      title={Scaling Versatile 3D Assets Editing with a Million-Scale Dataset}, 
+      author={Badi Li and Tianxin Huang and Yu Zhou and Wei-Shi Zheng and Yi Ma and Shenghua Gao},
+      year={2026},
+      eprint={2609.34271},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2609.34271}, 
+}`,
 
   footerNote:
     "Scalable 3D Foundation Model for Versatile Assets Editing",
