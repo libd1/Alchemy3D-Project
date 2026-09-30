@@ -124,56 +124,6 @@ window.SITE_CONFIG = {
   teaserStill: "assets/teaser_still.png",
 
   /**
-   * Animation sequence strips inside Results.
-   * Each sequence is sparsified to ~5 GLB keyframes with prev/next arrows.
-   */
-  animSequences: {
-    lead:
-      "While not production-ready (Refer to the limitations section of the paper), we show the potential for Alchemy3D-Animations to repurpose character animations by 3D Editing. Click Download to view on a card to fetch frames.",
-    sequences: [
-      {
-        id: "cxk",
-        // Orientations are pre-baked into the GLB files (no runtime rotation).
-        cameraOrbit: "0deg 70deg 105%",
-        cameraTarget: "0m 0.05m 0m",
-        fieldOfView: "28deg",
-        exposure: "1",
-        scale: "1.89 1.89 1.89",
-        preview: "assets/previews/animations/cxk.jpg",
-        frames: [
-          { id: "000", src: "animations/cxk/000.glb" },
-          { id: "006", src: "animations/cxk/006.glb" },
-          { id: "012", src: "animations/cxk/012.glb" },
-          { id: "021", src: "animations/cxk/021.glb" },
-          { id: "023", src: "animations/cxk/023.glb" },
-          { id: "024", src: "animations/cxk/024.glb" },
-          { id: "025", src: "animations/cxk/025.glb" },
-          { id: "029", src: "animations/cxk/029.glb" },
-        ],
-      },
-      {
-        id: "taffy",
-        cameraOrbit: "0deg 70deg 105%",
-        cameraTarget: "0m 0.05m 0m",
-        fieldOfView: "28deg",
-        exposure: "1",
-        scale: "1.89 1.89 1.89",
-        preview: "assets/previews/animations/taffy.jpg",
-        frames: [
-          { id: "000", src: "animations/taffy/000.glb" },
-          { id: "004", src: "animations/taffy/004.glb" },
-          { id: "008", src: "animations/taffy/008.glb" },
-          { id: "013", src: "animations/taffy/013.glb" },
-          { id: "017", src: "animations/taffy/017.glb" },
-          { id: "019", src: "animations/taffy/019.glb" },
-          { id: "021", src: "animations/taffy/021.glb" },
-          { id: "025", src: "animations/taffy/025.glb" },
-        ],
-      },
-    ],
-  },
-
-  /**
    * Segment showcases inside Results (one row, three wipe viewers).
    * Source vs semantic / instance prediction.
    */
